@@ -19,3 +19,9 @@ const Route = use('Route')
 Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
+
+// ROTAS USUARIO
+Route.get('user', 'UserController.list');
+Route.post('user', 'UserController.create')
+Route.get('user/:id', 'UserController.find')
+
